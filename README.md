@@ -49,13 +49,6 @@ Returns `{ "status": "ok" }` — used to verify the service is running.
 2. Maps each of the 14 emotions to 3 hand-curated verse IDs
 3. Serves matched verses on request with full translation data
 
-## Running locally
-```bash
-./mvnw spring-boot:run
-```
-
-API available at `http://localhost:8080`
-
 ## Deployed on
 
 [Railway](https://railway.app) — `https://gita-backend-production.up.railway.app`
