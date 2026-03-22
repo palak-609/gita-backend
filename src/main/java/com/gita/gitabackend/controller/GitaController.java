@@ -33,6 +33,7 @@ public class GitaController {
             verseMap.put("transliteration", v.transliteration);
             verseMap.put("wordMeanings",    v.wordMeanings);
             verseMap.put("translation",     v.translation);
+            verseMap.put("purport", v.purport);
             result.add(verseMap);
         }
         return result;

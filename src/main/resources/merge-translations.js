@@ -29,7 +29,11 @@ async function fetchTranslation(chapter, verse) {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${chapter}:${verse}`);
   const data = await res.json();
-  return data[TRANSLATOR]?.et || "";
+  const tr = data[TRANSLATOR];
+  return {
+  translation: tr?.et || "",
+  purport: tr?.ec || ""
+};
 }
 
 async function main() {
@@ -54,8 +58,8 @@ async function main() {
     const vn = v.verse_number;
 
     try {
-      const translation = await fetchTranslation(ch, vn);
-      result.push({ ...v, translation });
+      const { translation, purport } = await fetchTranslation(ch, vn);
+      result.push({ ...v, translation, purport });
       success++;
 
       // Progress bar

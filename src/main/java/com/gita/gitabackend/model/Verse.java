@@ -7,6 +7,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Verse {
     public int id;
 
+    public String purport;
+    
     @JsonProperty("chapter_number")
     public int chapter;
 
