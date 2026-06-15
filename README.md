@@ -51,7 +51,7 @@ Returns `{ "status": "ok" }` — used to verify the service is running.
 
 ## Deployed on
 
-[Railway](https://railway.app) — `https://gita-backend-production.up.railway.app`
+[Render](https://render.com) — `[https://gita-backend-ev93.onrender.com]`
 
 ## Part of
 
